@@ -7,20 +7,20 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1><center>Zing It</center></h1>
+  <h1><center>Zing It</center></h1>
 
+  
+  <div class="row">
     {% for music in music_types %}
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <h2 class="text">{{ music }}</h2>
-        </div>
+    <div class="column">
+      <div class="card">
+        <h3>{{music}}</h3>
       </div>
-      {% if forloop.counter0|divisibleby:"3" %}<div>{% endif %}
+    </div>
     {% endfor %}
-
+  </div>
     
-
-    
+    </div>
+  </div>
 </body>
 </html>
