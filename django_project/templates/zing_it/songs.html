@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href= "{% static 'zing_it/css/songs.css' %}"/>
-    <title>Home Page</title>
+    <title>Songs Page</title>
 </head>
 <body>
-    <h1><center>{{music.name}}</center></h1>
+    <h1><center>{{playlist_name}}</center></h1>
     <table>
         <tr>
-          <th>id</th>
+          <th>No.</th>
           <th>Track</th>
           <th>Artist</th>
           <th>Album</th>
@@ -18,7 +18,7 @@
         </tr>
         {% for song in songs  %}
         <tr>
-          <td>{{ song.id }}</td>
+          <td>{{ forloop.counter }}</td>
           <td>{{ song.Track }}</td>
           <td>{{ song.Artist }}</td>
           <td>{{ song.Album }}</td>
